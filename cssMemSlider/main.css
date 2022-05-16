@@ -27,11 +27,11 @@ body {
     align-content: space-between;
     width: 100%;
     max-width: 70%;
-    height: 95vh;
+    height: 100vh;
     padding: 2rem;
-    row-gap: 2rem;
+
     margin: 0 auto;
-    /* column-gap: 10%; */
+
 }
 .wrapper input {
     width: 0;
@@ -49,7 +49,7 @@ body {
     width: 70%;
     color: #f2f2f2;
     font-size: 2rem;
-    /* overflow-x: scroll; */
+    overflow: hidden;
 }
 .slider__sub-slide{
     height: 0;
