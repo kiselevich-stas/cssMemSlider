@@ -123,3 +123,19 @@ body {
     width: 0.5rem;
 }
 
+@media (max-width: 900px) {
+    .slider-wrapper{
+        height: 60%;
+    }
+    .slider__sub{
+        height: auto;
+        width: 100%;
+        order: 2;
+    }
+    .slider-controls{
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+    }
+}
