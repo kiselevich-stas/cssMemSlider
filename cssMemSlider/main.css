@@ -1,0 +1,125 @@
+.slides {
+	height: 100%;
+    width: 0;
+}
+.slides {
+	opacity: 0;
+	transition: opacity ease-in-out 0.5s;
+}
+.slide1 { background-image: url(img/1577921926166810137.png); background-size: contain; background-position: center; background-repeat: no-repeat;}
+.slide2 { background-image: url(img/doge-mem-minimalizm-sobaka-art.jpg); background-size: contain; background-position: center; background-repeat: no-repeat;}
+.slide3 { background-image: url(img/Drawn_wallpapers_Memes_on_your_desktop_096284_23.jpg); background-size: contain; background-position: center; background-repeat: no-repeat;}
+.slide4 { background-image: url(img/mem_lico_soglasie_risunok_82973_1920x1080.jpg); background-size: contain; background-position: center; background-repeat: no-repeat;}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+    background-color: #373b69;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    width: 100%;
+    max-width: 70%;
+    height: 95vh;
+    padding: 2rem;
+    row-gap: 2rem;
+    margin: 0 auto;
+    /* column-gap: 10%; */
+}
+.wrapper input {
+    width: 0;
+    height: 0;
+}
+.slider-wrapper {
+    width: 100%;
+    height: 80%;
+    display: flex;
+
+}
+.slider__sub {
+    height: 10%;
+    
+    width: 70%;
+    color: #f2f2f2;
+    font-size: 2rem;
+    /* overflow-x: scroll; */
+}
+.slider__sub-slide{
+    height: 0;
+    opacity: 0;
+    /* display: none; */
+    /* transform: translateX(-100%); */
+}
+.slider-controls {
+    height: 10%;
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+}
+.wrapper label {
+	display: inline-block;
+	background:#f2f2f2;
+    background-clip:padding-box;
+    box-sizing:border-box;
+    border: 1rem solid transparent;
+    border-radius: 50%;
+    margin: 0.2rem;
+    padding: 0.5rem;
+    height: 0.5rem;
+	width: 0.5rem;
+}
+.wrapper label:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+.wrapper label:active {
+    transform: scale(1.5);
+    transition: all 0.2s ease;
+}
+
+#slide1:checked ~ .slider-wrapper > .slide1,
+#slide2:checked ~ .slider-wrapper > .slide2,
+#slide3:checked ~ .slider-wrapper > .slide3,
+#slide4:checked ~ .slider-wrapper > .slide4 {
+    width: 100%;
+	opacity: 1;
+    transition: opacity ease-in-out 0.5s;
+}
+
+#slide1:checked ~ .slider__sub > .slider__sub-slide1,
+#slide2:checked ~ .slider__sub > .slider__sub-slide2,
+#slide3:checked ~ .slider__sub > .slider__sub-slide3,
+#slide4:checked ~ .slider__sub > .slider__sub-slide4 {
+    height: 100%;
+	opacity: 1;
+    /* display: block; */
+    /* transform: translateX(0); */
+    /* transition: transform ease-in-out 0.2s; */
+    transition: opacity ease-in-out 0.2s;
+}
+
+
+#slide1:checked ~ .slider-controls label:nth-of-type(1),
+#slide2:checked ~ .slider-controls label:nth-of-type(2),
+#slide3:checked ~ .slider-controls label:nth-of-type(3),
+#slide4:checked ~ .slider-controls label:nth-of-type(4){
+    cursor: pointer;
+    display: inline-block;
+    background: #22254b;
+    background-clip: padding-box;
+    box-sizing: border-box;
+    border: 1rem solid transparent;
+    border-radius: 50%;
+    margin: 0.2rem;
+    padding: 0.5rem;
+    height: 0.5rem;
+    width: 0.5rem;
+}
+
